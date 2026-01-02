@@ -58,10 +58,18 @@ Exemple:
 
 # Corret and overwrite class Student here 
 class Student:
-    def __init__(self):
-        pass
-       
+    def __init__(self, name: str, age: int, average: float):
+        self.name = name
+        self.age = age
+        self.average = average
 
+    def describe(self):
+        return f"Name: {self.name}. Age: {self.age}, Average: {self.average:.2f}"
+
+     def grade(self, new_grade):
+         self.average = (self.average + new_grade) / 2
+         
+         
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # student1 = Student("Pedro", 49, 8.5)
